@@ -1,0 +1,27 @@
+{
+    "name": "js-training",
+    "version": "1.0.0",
+    "description": "my training project",
+    "main": "index.js",
+    "scripts": {
+        "test": "wdio wdio.conf.js",
+        "wdio": "wdio run wdio.conf.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yojoman/js-training"
+    },
+    "author": "Pavel Abramuk",
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/cli": "^7.20.5",
+        "@wdio/local-runner": "^7.20.5",
+        "@wdio/mocha-framework": "^7.20.3",
+        "@wdio/spec-reporter": "^7.20.3",
+        "chromedriver": "^103.0.0",
+        "wdio-chromedriver-service": "^7.3.2"
+    },
+    "dependencies": {
+        "chai": "^4.3.6"
+    }
+}
