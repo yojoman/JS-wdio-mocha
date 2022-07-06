@@ -78,7 +78,7 @@ class SecurePage extends BasePage {
     await this.newMessageButton.click();
   }
 
-  async fillLetter(destination, subject) {
+  async fillLetter(destination, subject, text) {
     await this.letterDestination.waitForDisplayed();
     await this.letterDestination.click();
     await browser.keys(destination);
@@ -88,7 +88,7 @@ class SecurePage extends BasePage {
     await browser.keys("Tab");
     await browser.keys(subject);
     await browser.keys("Tab");
-    await browser.keys("Text example");
+    await browser.keys(text);
   }
 
   async verifyLetterFilledProperly(destination, subject) {

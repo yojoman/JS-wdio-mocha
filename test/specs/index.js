@@ -13,7 +13,7 @@ describe("Email test example", () => {
   after(async () => {
     await browser.refresh();
     await loginPage.verifyTitle("Proton Account");
-    await browser.saveScreenshot('testing result.png');
+    await browser.saveScreenshot("testing result.png");
   });
 
   it("Should login", async () => {
@@ -24,7 +24,11 @@ describe("Email test example", () => {
 
   it("Should create a new letter", async () => {
     await securePage.openNewMessage();
-    await securePage.fillLetter(testData.destination, testData.subject);
+    await securePage.fillLetter(
+      testData.destination,
+      testData.subject,
+      testData.text
+    );
     await securePage.verifyLetterFilledProperly(
       testData.destination,
       testData.subject
