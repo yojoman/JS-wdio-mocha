@@ -2,7 +2,7 @@ const BasePage = require("./base_page.js");
 
 class SecurePage extends BasePage {
   get newMessageButton() {
-    return $(".button.button-large.button-solid-norm.mt0-25.w100.no-mobile");
+    return $(".//button[text()='New message']");
   }
 
   get letterDestination() {
@@ -18,7 +18,7 @@ class SecurePage extends BasePage {
   }
 
   get closeLetterButton() {
-    return $('button[data-testid="composer:close-button"]');
+    return $('button[data-testid*="close-button"]');
   }
 
   get draftsFolderButton() {
@@ -34,11 +34,11 @@ class SecurePage extends BasePage {
   }
 
   get sendLetterButton() {
-    return $(".pl1.pr1.no-mobile");
+    return $(".//span[text()='Send']");
   }
-
+  
   get letterStatusInFolders() {
-    return $(".flex-item-fluid.text-center.p3");
+    return $(".//h3[text()='No messages found']");
   }
 
   get sentFolderButton() {
@@ -50,25 +50,23 @@ class SecurePage extends BasePage {
   }
 
   get deletePermanentlyButton() {
-    return $("button[data-testid='toolbar:deletepermanently']");
+    return $("button[data-testid*='deletepermanently']");
   }
 
   get deletePermanentlySubmitButton() {
-    return $("button[data-testid='permanent-delete-modal:submit']");
+    return $(".//button[text()='Delete']");
   }
-
+ 
   get userMenu() {
-    return $(
-      ".mtauto.mbauto.text-semibold.rounded.border.p0-25.inline-block.user-initials.relative.flex.flex-item-noshrink"
-    );
+    return $(".//button[contains(@class,'relative')]");
   }
 
   get signOutButton() {
-    return $("button[class='button button-solid-norm w100']");
+    return $(".//button[text()='Sign out']");
   }
 
   get notificationSentLetter() {
-    return $(".p1.mb0-5.text-break.notification.notification--in.bg-success");
+    return $(".//span[text()='Message sent.']");
   }
 
   async verifyTitle(title) {
