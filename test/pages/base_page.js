@@ -1,6 +1,5 @@
 module.exports = class BasePage {
   async open(path) {
-    await browser.maximizeWindow();
     return await browser.url(path);
   }
 
