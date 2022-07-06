@@ -6,6 +6,16 @@ const SecurePage = require("../pages/secure_page.js");
 const securePage = new SecurePage();
 
 describe("Email test example", () => {
+  before(async () => {
+    await browser.maximizeWindow();
+  });
+
+  after(async () => {
+    await browser.refresh();
+    await loginPage.verifyTitle("Proton Account");
+    await browser.saveScreenshot('testing result.png');
+  });
+
   it("Should login", async () => {
     await loginPage.open();
     await loginPage.login(creds.username, creds.password);
@@ -54,7 +64,7 @@ describe("Email test example", () => {
     await securePage.verifyLettersInSent(testData.subject);
   });
 
-  it("Delete letter from Sent folder", async () => {
+  it("Delete all letters from Sent folder", async () => {
     await securePage.sellectAllLetters();
     await securePage.deleteAllLettersFromSent();
     await securePage.verifyLettersNotPresentInSent();
@@ -66,4 +76,3 @@ describe("Email test example", () => {
     await loginPage.verifyTitle("Proton Account");
   });
 });
-
