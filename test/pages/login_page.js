@@ -39,4 +39,5 @@ class LoginPage extends BasePage {
     await super.verifyTitle(title);
   }
 }
+
 module.exports = LoginPage;

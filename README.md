@@ -7,4 +7,4 @@ Installing:
 3. npm install chai
 
 Running:
-Use 'npm test' command.
+use 'npm test' command.
