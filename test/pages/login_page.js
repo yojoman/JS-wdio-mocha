@@ -34,6 +34,7 @@ class LoginPage extends BasePage {
   async open() {
     return await super.open("/");
   }
+
   async verifyTitle(title) {
     await this.inputUserPassword.waitForDisplayed();
     await super.verifyTitle(title);
