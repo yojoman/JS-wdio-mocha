@@ -1,3 +1,5 @@
+# JS-wdio-mocha
+
 Automated scenarios in JS for ProtonMail which include verifications of base use cases.
 
 Technologies: Node.js + WebdriverIO + Mocha
