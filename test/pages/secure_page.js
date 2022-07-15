@@ -36,7 +36,7 @@ class SecurePage extends BasePage {
   get sendLetterButton() {
     return $(".//span[text()='Send']");
   }
-  
+
   get letterStatusInFolders() {
     return $(".//h3[text()='No messages found']");
   }
@@ -56,7 +56,7 @@ class SecurePage extends BasePage {
   get deletePermanentlySubmitButton() {
     return $(".//button[text()='Delete']");
   }
- 
+
   get userMenu() {
     return $(".//button[contains(@class,'relative')]");
   }
@@ -71,7 +71,7 @@ class SecurePage extends BasePage {
 
   async verifyTitle(title) {
     await this.newMessageButton.waitForDisplayed();
-    await expect(browser).toHaveTitleContaining(title);
+    await super.verifyTitle();
   }
 
   async openNewMessage() {
