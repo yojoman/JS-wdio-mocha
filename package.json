@@ -1,7 +1,7 @@
 {
     "name": "js-training",
     "version": "1.0.0",
-    "description": "my training project",
+    "description": "automated scenarios with mocha",
     "main": "index.js",
     "scripts": {
         "test": "wdio wdio.conf.js",
