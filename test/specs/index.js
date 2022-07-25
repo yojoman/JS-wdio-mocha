@@ -1,9 +1,7 @@
 const creds = require("../data/credentials.js");
 const testData = require("../data/testData.js");
-const LoginPage = require("../pages/login_page");
-const loginPage = new LoginPage();
-const SecurePage = require("../pages/secure_page.js");
-const securePage = new SecurePage();
+const loginPage = require("../pages/login_page");
+const securePage = require("../pages/secure_page.js");
 
 describe("Email test example", () => {
   before(async () => {
