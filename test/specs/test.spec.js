@@ -1,6 +1,6 @@
 const loginPage = require("../pages/login.page");
 const securePage = require("../pages/secure.page.js");
-const resources = require("../resources/index.js");
+const resources = require("../resources/data.js");
 
 describe("Email test example", () => {
   before(async () => {
@@ -10,7 +10,7 @@ describe("Email test example", () => {
   after(async () => {
     await browser.refresh();
     await loginPage.verifyTitle("Proton Account");
-    await browser.saveScreenshot("testing result.png");
+    await browser.saveScreenshot("result/testing result.png");
   });
 
   it("Should login", async () => {

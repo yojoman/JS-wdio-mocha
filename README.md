@@ -5,8 +5,8 @@ Automated scenarios in JS for ProtonMail which include verifications of base use
 Technologies: Node.js + WebdriverIO + Mocha
 
 Installing:
-1. npm init
-2. npm init wdio
+1. Clone the repository.
+2. Use 'npm install' command.
 
 Running:
-use 'npm test' command.
+Use 'npm test' command.
